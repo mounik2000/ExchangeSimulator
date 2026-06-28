@@ -45,5 +45,5 @@ mkdir build
 cmake ..
 make -j
 cp ExchangeSim* ../pythonBridge/
-cd pythonBridge/
+cd ../pythonBridge/
 python test.py
