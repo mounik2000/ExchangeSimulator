@@ -1,4 +1,4 @@
-# Exchnage Order Book Simulator (C++ + Python)
+# Exchange Order Book Simulator (C++ + Python)
 
 ## Overview
 A high-performance limit order book simulator implemented in C++ with Python bindings.  
