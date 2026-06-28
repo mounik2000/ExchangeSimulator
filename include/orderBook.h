@@ -3,7 +3,7 @@
 #include <unordered_map>
 #include <map>
 #include <string>
-#include <deque>
+#include <list>
 
 enum class Side { BUY, SELL };
 
@@ -42,7 +42,7 @@ public:
     BenchResult runBenchmark(int numOperations);
 
 private:
-    using OrderQueue = std::deque<Order>;
+    using OrderQueue = std::list<Order>;
     using BidBook = std::map<double, OrderQueue, std::greater<>>;
     using AskBook = std::map<double, OrderQueue, std::greater<>>;
 
