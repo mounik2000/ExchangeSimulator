@@ -15,6 +15,10 @@ void ExchangeHandler::modifyOrder(const std::string& symbol, int id, double pric
 std::vector<Trade> ExchangeHandler::getTrades(const std::string& symbol) {
     return _orderBooks[symbol].getTrades();
 }
+    
+std::pair<std::vector<Level>, std::vector<Level>> ExchangeHandler::getSnapshot(const std::string& symbol, int numLevels) {
+    return _orderBooks[symbol].getSnapshot(numLevels);
+}
 
 BenchResult ExchangeHandler::runBenchmark(const std::string& symbol, int numOps) {
     return _orderBooks[symbol].runBenchmark(numOps);

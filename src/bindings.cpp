@@ -38,5 +38,6 @@ PYBIND11_MODULE(ExchangeSimulator, m) {
         .def("cancelOrder", &ExchangeHandler::cancelOrder)
         .def("modifyOrder", &ExchangeHandler::modifyOrder)
         .def("getTrades", &ExchangeHandler::getTrades)
+        .def("getSnapshot", &ExchangeHandler::getSnapshot)
         .def("runBenchmark", &ExchangeHandler::runBenchmark);
 }
