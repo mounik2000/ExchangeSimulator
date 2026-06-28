@@ -2,12 +2,12 @@ import ExchangeSimulator
 
 ex = ExchangeSimulator.ExchangeHandler()
 
-ex.addOrder("AAPL", 1, 100.5, 10, "BUY")
-ex.addOrder("AAPL", 2, 100.0, 5, "SELL")
-ex.modifyOrder("AAPL", 1, 100.5, 20)
-ex.cancelOrder("AAPL",3)
+ex.addOrder("JIOF", 1, 100.5, 10, "BUY")
+ex.addOrder("JIOF", 2, 100.0, 5, "SELL")
+ex.modifyOrder("JIOF", 1, 100.5, 20)
+ex.cancelOrder("JIOF",3)
 
-for t in ex.getTrades("AAPL"):
+for t in ex.getTrades("JIOF"):
     print(
         t.price,
         t.qty,
@@ -15,6 +15,9 @@ for t in ex.getTrades("AAPL"):
         t.sellId
     )
 
-result = ex.runBenchmark("AAPL", 500000)
-print("OPS/sec:", result.perSecOps)
-print("Time:", result.seconds)
+
+for s in ["JIOF","AMZN","GOOG","NVDA"]:
+    result = ex.runBenchmark(s, 500000)
+    print("Symbol:", s)
+    print("OPS/sec:", result.perSecOps)
+    print("Time:", result.seconds)
