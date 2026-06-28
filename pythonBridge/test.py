@@ -17,7 +17,8 @@ for t in ex.getTrades("JIOF"):
 
 
 for s in ["JIOF","AMZN","GOOG","NVDA"]:
-    result = ex.runBenchmark(s, 500000)
+    result = ex.runBenchmark(s, 100000)
     print("Symbol:", s)
     print("OPS/sec:", result.perSecOps)
     print("Time:", result.seconds)
+    print("NanoSecPerOp", result.seconds*10000)
